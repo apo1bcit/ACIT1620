@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            animation-duration: 3s;
+            animation-name: slide-in;
+        }
+        @keyframes slide-in {
+            from {
+                translate: 150 vw 0;
+                scale: 200% 
+            }
+        }
+        .color-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: royalblue;
+            color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        .color-btn:hover {
+            background-color: crimson;
+        }
+        .matrix {
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        .matrix:hover {
+            transform: matrix(1, 0.5, -0.5, 1, 30, 20);
+            /* matrix(scaleX, skewY, scaleY, translateX, translateY) */
+        }
+        .skew {
+            width:150px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+        .scale {
+            width: 150px;
+            height: 100px;
+            background-color: lightgreen;
+            text-align: center;line-height: 100px;
+            transition: transform 0.5s ease;
+            /* transform-origin: top left; */
+        }
+
+        .scale:hover {
+            /* transform:translate(50px, 30px); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(200px); */
+        }
+        .rotate {
+            width: 150px;
+            height: 100px;
+            background-color: orangered;
+            text-align: center;line-height: 100px;
+            transition: transform 0.5s ease;
+            transform-origin: top left;
+        }
+
+        .rotate:hover {
+            /* transform:translate(50px, 30px); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(200px); */
+
+            transform: rotate(45deg)
+        }
+        
+        .translate {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        .translate:hover {
+            /* transform:translate(50px, 30px); */
+            /* transform: translateX(100px); */
+            transform: translateY(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="translate">Move Me!</div>
+    <div class="rotate">Rotate Me!</div>
+    <div class="scale">Scale Me!</div>
+    <div class="skew">Skew Me!</div>
+    <div class="matrix">Matrix Me!</div>
+    <div class="color-btn">Hover Me!</div>
+</body>
+</html>
